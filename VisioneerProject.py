@@ -125,7 +125,7 @@ while True:
     if not ret:
         print("[Error] Frame wasn't captured, make sure you have an input video source")
         break
-    frame = cv2.resize(frame, (640, 360))
+    frame = cv2.resize(frame, (960, 540))
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     frame_history.append(frame_gray)
     if len(frame_history) > 3:
