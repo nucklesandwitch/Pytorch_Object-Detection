@@ -110,7 +110,7 @@ def draw_boxes(frame, boxes, scores, labels, threshold=0.5):
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
     return frame
 
-model = fasterrcnn_resnet50_fpn(pretrained=True)
+model = fasterrcnn_resnet50_fpn(weights=True)
 model.eval()
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
